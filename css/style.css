@@ -1,0 +1,90 @@
+/* eot?#iefix 전익스에서도 가능 */
+
+@font-face {
+    font-family: 'GL';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format("truetype");
+    font-display: swap;
+} 
+/* font face는 한마디로 정의를 내린다 */
+@font-face { 
+    font-family: 'GM';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'GB';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
+    font-display: swap;
+} 
+/* css의 변수 어디에서나 쓸 수 있는 css --두개를 적어야함 */
+:root{
+    --colorGreen : #cedfc3;
+    --colorDGreen : #647367;
+    --colorBg : #f8f8e7;
+    --colorGBg : #d6e3ca;
+    --colorBtn : #ce5561;
+    --bodyc : #474747;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'GM';
+    color: var(--bodyc);
+}
+#box{
+    width: 10rem;
+    height: 10rem;
+    background-color: black;
+    border-radius: 50%;
+    transition: transform 0.5s;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* 퍼센트를 정해줄 기준 즉 부모가 없어서 퍼센트를 적용불가능 높이 그럴떈 높이 너비 둘다 rem을 쓰면 적용이 가능*/
+}
+#box:hover{
+    transform: scale(2);
+    background-color: yellow;
+    
+}
+#box::before{ 
+    content: "이준성입니다만?";
+    color: white;
+    text-align: center;
+    display: block;
+    line-height: 10rem;
+}
+#box:hover::before{
+    content: "어쩌라고요";
+    color: black;
+}
+/* ::before은 inline레벨 이런 가상선택자는 자바 스크립트에선 찾을 수 없는 더미데이터 */
+
+/* min width가 더많이 쓰임 */
+
+/* 맥스위드는 768부터 파랑색 그래서 크기나 색깔 순서를 꼭 맞춰줄것 */
+
+/* 공통클래스도 속성하고 이름값같게 남들도 쓰기편하게 ex).overflow-hidden
+                                                        {overflow: hidden;} */
+/* 공통클래스 폰트 레이아웃등등 */
